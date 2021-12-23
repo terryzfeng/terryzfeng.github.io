@@ -1,5 +1,4 @@
 @import url("animate.css");
-
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 
 .selectDisable {
@@ -9,14 +8,6 @@
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
-
-.selectEnable { 
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -o-user-select: text;
-  user-select: text;
 }
 
 /* BEGIN */
@@ -32,6 +23,8 @@ html {
 }
 
 .centered {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -43,6 +36,15 @@ html {
   text-align: center;
 }
 
+.material-icons-outlined.icon {
+  font-size: 36px;
+}
+
+.top-left {
+  position: fixed;
+  padding: 2%;
+}
+
 .tree {
   justify-content: center;
   list-style: none;
@@ -50,7 +52,7 @@ html {
 }
 
 .tree-item {
-  padding: 0.5rem;
+  padding: 5%;
 }
 
 a {
@@ -63,4 +65,20 @@ a:hover {
   filter: invert(60%);
   -webkit-filter: invert(60%);
   transition-timing-function: ease-out;
+}
+
+@media only screen 
+  and (max-width: 812px) 
+  and (orientation: landscape) {
+
+  .centered {
+    max-height: 100vh;
+    flex-direction: row;
+  }
+
+  .title {
+    margin: auto;
+    margin-right: 10%;
+  }
+
 }
