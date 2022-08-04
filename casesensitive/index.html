@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="./mobile.css" />
 <html>
 
 <body>
@@ -7,44 +8,6 @@
     <style>
         textarea {
             font-family: Jost, Arial, Helvetica, sans-serif;
-        }
-
-        @media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 3) {
-
-            .title {
-                text-align: center;
-                font-size: 6rem;
-                max-width: 90%;
-            }
-            
-            label, form, #display {
-                text-align: center;
-                font-size: 4rem;
-                max-width: 90%;
-                max-height: 40vh;
-            }
-
-            input {
-                font-size: 3rem;
-            }
-
-            textarea {
-                font-size: 3rem;
-                height: 30rem;
-                width: 90%;
-            }
-            
-            .centered {
-                width: 90%;
-                top: 20%;
-                transform: translate(-50%, -20%);
-                padding: 2rem;
-            }
-            
-            .middle {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 
@@ -86,10 +49,9 @@
                 <INPUT TYPE="button" NAME="button1" Value="decode" onClick="decodeText(this.form)">
         </FORM>
 
-        <div>
+        <div class="output">
             <h2 class="title">OUTPUT</h2>
             <p id="display"></p>
-
         </div>
     </div>
 
