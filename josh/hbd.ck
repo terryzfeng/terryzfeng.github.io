@@ -4,7 +4,7 @@ TriOsc osc => ADSR e => JCRev rev => dac;
 global int KEY;
 
 e.set( 10::ms, 8::ms, .5, 500::ms );
-rev.mix(0.08);
+rev.mix(0.05);
 
 // Happy Birthday in midi notes
 [ [0, 0, 2, 0, 5, 4],
