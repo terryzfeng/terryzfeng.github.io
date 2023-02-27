@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Josh</title>
+        <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/darkly/bootstrap.min.css">
+
+    </head>
+
+    <body>
+        <style>
+            /* Style Here */
+            /* Center Container */
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 100%;
+            }
+            .slidercontainer {
+                text-align: center;
+                width: 100%;
+                padding-bottom: 1em;
+            }
+            .slider {
+                width: 200px;
+            }
+            /* center josh */
+            .josh-container {
+                width: auto;
+            }
+            #josh {
+                display: none;
+            }
+            
+        </style>
+        <div class="css-script-clear"></div>
+        <div class="container" style="position: absolute">
+            <div class="josh-container">
+                <img src="josh.png" id="josh" width="200px">
+            </div>
+            <h1 id="title">Click me when you're ready</h1>
+            <div class="slidercontainer texture">
+                <label for="key-slider" id="key-slider-label">Key</label> <br>
+                <input type="range" min="0" max="12" value="0" class="slider" id="key-slider">
+            </div>
+            <button onclick="startConfetti();" class="btn btn-success" id="mainButton">Click Me</button>
+            <button onclick="stopConfetti();" class="btn btn-danger" id="stopButton">Stop</button>
+            <br>
+        </div>
+
+
+        <!-- Connect Web Audio API, Connect webchuck.js and webchuck.wasm -->
+        <script> var whereIsChuck = "https://cdn.jsdelivr.net/gh/ccrma/webchuck/src"; </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccrma/webchuck/src/webchuck_host.js"></script>
+
+        <!-- Your scripts here! -->
+        <script type="text/javascript" src="confetti.js"></script>
+        <script type="text/javascript" src="connect.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+
+</html>
