@@ -1,0 +1,74 @@
+@media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 3),
+       only screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (-webkit-min-device-pixel-ratio: 4) {
+    .title {
+        text-align: center;
+        font-size: 6rem;
+        max-width: 90%;
+    }
+
+    label,
+    form {
+        text-align: center;
+        font-size: 4rem;
+        max-height: 40vh;
+    }
+
+    #display {
+        font-size: 4rem;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .output {
+        width: 100%;
+        align-items: center;
+    }
+
+    input {
+        font-size: 3rem;
+    }
+
+    textarea {
+        font-size: 3rem;
+        height: 30rem;
+        width: 90%;
+    }
+
+    .centered {
+        width: 90%;
+        top: 20%;
+        transform: translate(-50%, -20%);
+        padding: 2rem;
+    }
+    
+    .output {
+        justify-content: center;
+        align-items: right;
+    }
+    .title {
+        margin: auto;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 2) {
+    .title {
+        font-size: 5rem;
+    }
+    
+    label, #display {
+        font-size: 3rem;
+    }
+
+    textarea {
+        height: 25%;
+        font-size: 2rem;
+        width: 90%;
+    }
+    
+}
