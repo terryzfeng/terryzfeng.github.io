@@ -16,7 +16,7 @@ for the most serious of slide whistlers or those who just wanna have fun!
 - Teensy 4.0 + Audio Shield
 - Alps Motorized Fader 
 - MPX5010 Pressure Sensor
-- 4 FSRs
+- 4 Force Sensing Resistors (FSR)
 
 ## Images
 ![slide-whistlinator](images/presentation_main.jpg)
@@ -25,3 +25,4 @@ for the most serious of slide whistlers or those who just wanna have fun!
 ![slide-whistlinator](images/slide_whistlinator_internal.jpeg)
 ![slide-whistlinator](images/slide_whistlinator_open.jpeg)
 ![slide-whistlinator](images/slide_whistlinator%20%5B3D%5D.png)
+
