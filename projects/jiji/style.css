@@ -1,0 +1,169 @@
+@import url('firework.css');
+
+@font-face {
+  font-family: 'Milky Matcha';
+  src: url(./assets/Milky\ Matcha.otf);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Milky Matcha', cursive;
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#start-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-button {
+  border-radius: 100%;
+  border: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  padding: 0;
+  animation: pulse 1s infinite alternate;
+}
+
+#UI {
+  /* overlay fullscreen absolute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: middle;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#UI-image {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.05);
+  z-index: 5;
+}
+
+#UI-image.outline {
+  filter: brightness(0.05) drop-shadow(0 0 0.15rem white);
+  animation: revealOutline 3s forwards; /* Add animation */
+}
+
+#UI-image.outline.active {
+  filter: brightness(1);
+  transition: filter 3s;
+}
+
+#to, #from {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@keyframes revealOutline {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+#UI h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#UI h2 {
+  font-size: 2rem;
+}
+
+#UI p {
+  font-weight: 100;
+  font-size: 1rem;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+#main-block {
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0 0 0.15rem white);
+  height: 60vh;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  #UI-image {
+    left: -50%;
+    width: 200%;
+    overflow: hidden;
+  }
+
+  #UI h1 {
+    font-size: 3rem;
+    word-spacing:9999px;
+    white-space: pre-line;
+    text-align: center;
+  }
+}
+
+/* animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
