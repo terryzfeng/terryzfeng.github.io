@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiji</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js"></script>
+  <script src="fireworks.js" defer></script>
+</head>
+
+<body>
+  <div id="UI" draggable="false">
+    <div id="count-block" class="center" style="display: flex; flex-direction: column;">
+      <h2>Countdown:</h2>
+      <h2 id="countdown"style="font-family: monospace">00:00:00</h2>
+    </div>
+
+    <div id="start-block" class="hidden">
+      <h3 style="padding-bottom: 1rem">Click Me!</h3>
+      <button id="start-button"></button>
+    </div>
+
+    <div id="main-block" class="hidden center">
+      <h1 id="to">Happy Birthday Jiji!</h1>
+      <br>
+      <br>
+      <p id="from">
+        Hope you have a fantabulous day celebrating with family and friends!
+        <br>
+        <br>
+        <br>
+        - terry :)
+      </p>
+      </div>
+    </div>
+    <img id="UI-image" src="./assets/jiji-ny-comp.png">
+  </div>
+
+
+  <!-- App -->
+  <div class="container" z-index="-10">
+    <div class="loading-init">
+      <div class="loading-init__header"></div>
+      <div class="loading-init__status"></div>
+    </div>
+    <div class="stage-container remove">
+      <div class="canvas-container">
+        <canvas id="trails-canvas"></canvas>
+        <canvas id="main-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
