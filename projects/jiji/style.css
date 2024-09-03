@@ -88,12 +88,12 @@ button:hover {
   left: 0;
   width: 100%;
   object-fit: cover;
-  filter: brightness(0.05);
+  filter: brightness(0.00);
   z-index: 5;
 }
 
 #UI-image.outline {
-  filter: brightness(0.05) drop-shadow(0 0 0.15rem white);
+  filter: brightness(0.00) drop-shadow(0 0 0.15rem white);
   animation: revealOutline 3s forwards; /* Add animation */
 }
 
