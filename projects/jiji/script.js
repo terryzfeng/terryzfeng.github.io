@@ -4,10 +4,9 @@ const mainBlock = document.getElementById('main-block');
 const page = document.getElementById('page')
 const uiImage = document.getElementById('UI-image');
 
-// initialize
+// countdown
 const countdown = document.getElementById('countdown');
-const eventDate = new Date('2024-09-01T00:00:00-07:00'); // Set event date in PST
-// const eventDate = new Date('2024-09-06T00:00:00-07:00'); // Set event date in PST
+const eventDate = new Date('2024-09-06T00:00:00-07:00'); // Set event date in PST
 let counter = setInterval(() => {
   const time = new Date();
   const diff = eventDate - time;
